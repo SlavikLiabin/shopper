@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const LoginSighUp = () => {
-  return (
-    <div>LoginSighUp</div>
-  )
-}
+  return <div>LoginSighUp</div>;
+};
 
-export default LoginSighUp
+export default LoginSighUp;

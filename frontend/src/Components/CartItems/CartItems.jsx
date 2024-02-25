@@ -2,12 +2,12 @@ import React, { useContext } from "react";
 import "./CartItems.css";
 import { ShopContext } from "../../Context/ShopContext";
 import remove_icon from "../Assets/cart_cross_icon.png";
-import all_product from "../Assets/all_product";
+// import all_product from "../Assets/all_product";
 
 // это карточки в корзине которые
 
 const CartItems = () => {
-  const { getTotalCartAmount, all_product, cartItems, removeFromCart } =
+  const { all_product, cartItems, removeFromCart, getTotalCartAmount } =
     useContext(ShopContext);
   return (
     <div className="cartitems">

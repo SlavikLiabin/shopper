@@ -23,6 +23,7 @@ const ShopContextProvider = (props) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
   };
 
+  // почему не работает эта функция здесь и в CartItems.jsx
   const getTotalCartAmount = () => {
     let totalAmount = 0;
     for (const item in cartItems) {
@@ -36,17 +37,23 @@ const ShopContextProvider = (props) => {
     }
   };
 
-  const getTotalCartItems = () =>{
+  const getTotalCartItems = () => {
     let totalItem = 0;
-    return 5
-  }
+    for (const item in cartItems) {
+      if (cartItems[item] > 0) {
+        totalItem += cartItems[item];
+      }
+    }
+    return totalItem;
+  };
 
   const contextValue = {
-    getTotalCartAmount,
     all_product,
     cartItems,
     addToCart,
     removeFromCart,
+    getTotalCartAmount,
+    getTotalCartItems,
   };
 
   return (

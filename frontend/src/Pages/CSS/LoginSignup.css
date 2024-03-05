@@ -72,3 +72,33 @@
   height: 30px;
   width: 30px;
 }
+
+@media (max-width: 1280px) {
+  .loginsignup {
+    padding-top: 50px;
+  }
+
+  .loginsignup-container {
+    width: auto;
+    max-width: 500px;
+    max-height: 500px;
+  }
+
+  .loginsignup-container h1 {
+    margin: 10px 0px;
+  }
+
+  .loginsignup-fields {
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .loginsignup-fields input {
+    height: 65px;
+    width: 93%;
+  }
+
+  .loginsignup-container button {
+    width: 100%;
+  }
+}
